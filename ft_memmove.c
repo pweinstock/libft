@@ -6,49 +6,37 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 18:12:02 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/17 19:26:42 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/22 11:10:41 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include <stddef.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			i;
-	unsigned char	temp;
-	//unsigned char	temp[len];
-	i = 0;
-	/*while (i < len)
+	size_t	i;
+	
+	if (!dst && !src)
 	{
-		temp[i] = ((unsigned char *)src)[i];
-		i++;
+		return (0);
 	}
-	i = 0;
-	while (i < len)
+	if (dst > src)
 	{
-		((unsigned char *)dst)[i] = temp[i];
-		i++;
-	}*/
-	while (i < len)
+		i = len;
+		while (i > 0)
+		{
+			((unsigned char *)dst)[i - 1] = ((unsigned char *)src)[i - 1];
+			i--;
+		}
+	}
+	else
 	{
-		temp = ((unsigned char *)src)[i];
-		((unsigned char *)dst)[i] = temp;
-		i++;
+		i = 0;
+		while (i < len)
+		{
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
 	}
 	return (dst);
-}
-
-int	main(void)
-{
-	char	dst[20] = "destination";
-	char	*src;
-	size_t	len;
-
-	src = "sourceand123456";
-	len = 10;
-	printf("%s\n", dst);
-	//printf("%s\n", memmove(dst, src, len));
-	printf("%s\n", ft_memmove(dst, src, len));
-	return (0);
 }

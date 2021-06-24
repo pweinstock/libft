@@ -6,16 +6,15 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 08:55:24 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/16 09:30:58 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/19 10:20:51 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include <stddef.h>
 
-int	ft_isalpha(int i)
+int	ft_isalpha(int c)
 {
-	if ((i >= 'A' && i <= 'Z') || (i >= 'a' && i <= 'z'))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 	{
 		return (1);
 	}
@@ -23,11 +22,4 @@ int	ft_isalpha(int i)
 	{
 		return (0);
 	}
-}
-
-int	main(void)
-{
-	printf("%d\n", isalpha('K'));
-	printf("%d\n", ft_isalpha('K'));
-	return (0);
 }

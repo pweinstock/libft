@@ -6,25 +6,13 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/18 10:47:05 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/18 11:03:05 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/22 11:27:13 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stddef.h>
 #include <stdlib.h>
-#include <stdio.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != 0)
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
@@ -35,20 +23,15 @@ char	*ft_strdup(const char *s1)
 	i = 0;
 	len = ft_strlen(s1);
 	ptr = (char *)malloc(len * sizeof(char));
+	if (!ptr)
+	{
+		return (0);
+	}
 	while (i < len)
 	{
 		ptr[i] = s1[i];
 		i++;
 	}
+	ptr[i] = 0;
 	return (ptr);
-}
-
-int	main(void)
-{
-	const char	*s1;
-
-	s1 = "This is a test";
-	//printf("%s\n", strdup(s1));
-	printf("%s\n", ft_strdup(s1));
-	return (0);
 }

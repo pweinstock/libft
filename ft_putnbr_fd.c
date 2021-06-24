@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/18 10:06:56 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/22 11:22:34 by pweinsto         ###   ########.fr       */
+/*   Created: 2021/06/23 15:37:51 by pweinsto          #+#    #+#             */
+/*   Updated: 2021/06/23 16:37:43 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int		*ptr;
-	size_t	i;
+	unsigned int	x;
 
-	ptr = (int *)malloc(count * size);
-	if (!ptr)
-	{
-		return (0);
-	}
-	i = 0;
-	while (i < count)
-	{
-		ptr[i] = 0;
-		i++;
-	}
-	return (ptr);
+
+	if (n < 0)
+		{
+			ft_putchar_fd('-', fd);
+			x = (unsigned int)(n * -1);
+		}
+	else 
+		x = (unsigned int)n;
+	if (x >= 10)
+		ft_putnbr_fd(x / 10, fd);
+	ft_putchar_fd((x % 10) + 48, fd);
 }

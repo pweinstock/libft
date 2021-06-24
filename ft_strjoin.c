@@ -1,33 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/18 10:06:56 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/22 11:22:34 by pweinsto         ###   ########.fr       */
+/*   Created: 2021/06/22 13:55:27 by pweinsto          #+#    #+#             */
+/*   Updated: 2021/06/22 14:44:19 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		*ptr;
+	char	*ptr;
+	size_t	lens1;
+	size_t	lens2;
 	size_t	i;
 
-	ptr = (int *)malloc(count * size);
-	if (!ptr)
-	{
+	if (!s1 || !s2)
 		return (0);
-	}
+	lens1 = ft_strlen(s1);
+	lens2 = ft_strlen(s2);
 	i = 0;
-	while (i < count)
+	ptr = (char *)malloc(sizeof(char const *) * (lens1 + lens2 + 1));
+	if (!ptr)
+		return (0);
+	while (i < lens1)
 	{
-		ptr[i] = 0;
+		ptr[i] = s1[i];
 		i++;
 	}
+	while (i < lens1 + lens2)
+	{
+		ptr[i] = s2[i - lens1];
+		i++;
+	}
+	ptr[i] = 0;
 	return (ptr);
 }

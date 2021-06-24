@@ -6,12 +6,11 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 17:05:38 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/16 17:27:58 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/19 10:17:24 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include <stddef.h>
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -34,16 +33,4 @@ char	*ft_strchr(const char *s, int c)
 	{
 		return (0);
 	}
-}
-
-int	main(void)
-{
-	const char	*s;
-	int			c;
-
-	s = "foo bar baz";
-	c = 'r';
-	printf("%s\n", strchr(s, c));
-	printf("%s\n", ft_strchr(s, c));
-	return (0);
 }

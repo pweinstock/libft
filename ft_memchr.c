@@ -6,12 +6,11 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:49:14 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/17 20:07:18 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/19 10:16:47 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -35,18 +34,4 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		return (0);
 	}
-}
-
-int	main(void)
-{
-	const void	*s;
-	int			c;
-	size_t		n;
-
-	s = "foo bar baz";
-	c = 'x';
-	n = 10;
-	//printf("%s\n", memchr(s, c, n));
-	printf("%s\n", ft_memchr(s, c, n));
-	return (0);
 }

@@ -6,16 +6,15 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:03:58 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/16 09:31:18 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/19 10:16:31 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include <stddef.h>
 
-int	ft_isprint(int i)
+int	ft_isprint(int c)
 {
-	if (i >= 32 && i <= 126)
+	if (c >= 32 && c <= 126)
 	{
 		return (1);
 	}
@@ -23,11 +22,4 @@ int	ft_isprint(int i)
 	{
 		return (0);
 	}
-}
-
-int	main(void)
-{
-	printf("%d\n", isprint(32));
-	printf("%d\n", ft_isprint(32));
-	return (0);
 }
