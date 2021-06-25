@@ -6,12 +6,10 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 13:55:27 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/22 14:44:19 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:27:43 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

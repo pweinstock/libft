@@ -6,13 +6,10 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 10:18:08 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/23 18:30:29 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:27:50 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)

@@ -6,12 +6,10 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 09:56:24 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/23 11:57:18 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:26:09 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 static int	ft_lennbr(int n)

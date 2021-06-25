@@ -6,11 +6,11 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 12:59:29 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/19 10:15:42 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:25:18 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

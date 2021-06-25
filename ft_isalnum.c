@@ -6,11 +6,10 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:37:10 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/19 14:41:52 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:25:35 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 int	ft_isalnum(int c)

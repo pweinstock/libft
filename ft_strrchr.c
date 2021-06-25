@@ -6,11 +6,10 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:37:58 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/19 15:32:00 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:28:26 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)

@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/23 15:37:51 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/24 15:59:48 by pweinsto         ###   ########.fr       */
+/*   Created: 2021/06/25 15:21:53 by pweinsto          #+#    #+#             */
+/*   Updated: 2021/06/25 15:59:49 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned int	x;
+	t_list	*ptr;
+	t_list	*new;
 
-	if (n < 0)
+	ptr = 0;
+	while (lst != 0)
 	{
-		ft_putchar_fd('-', fd);
-		x = (unsigned int)(n * -1);
+		new = ft_lstnew(f(lst -> content));
+		if (new == 0)
+			ft_lstclear(&new, del);
+		else
+			ft_lstadd_back(&ptr, new);
+		lst = lst -> next;
 	}
-	else
-		x = (unsigned int)n;
-	if (x >= 10)
-		ft_putnbr_fd(x / 10, fd);
-	ft_putchar_fd((x % 10) + 48, fd);
+	return (ptr);
 }

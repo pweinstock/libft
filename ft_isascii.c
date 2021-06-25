@@ -6,11 +6,11 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:03:47 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/19 10:16:19 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:25:47 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

@@ -6,19 +6,17 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 12:03:14 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/23 16:55:07 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:28:07 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*ptr;
-	size_t		i;
-	size_t		len;
+	size_t	i;
+	size_t	len;
 
 	if (!s)
 		return (0);

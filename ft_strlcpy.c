@@ -6,11 +6,10 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 17:45:02 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/24 09:40:17 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:27:56 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

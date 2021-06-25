@@ -6,16 +6,16 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 18:12:02 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/22 11:10:41 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:26:58 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
-	
+
 	if (!dst && !src)
 	{
 		return (0);

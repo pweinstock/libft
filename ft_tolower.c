@@ -6,11 +6,11 @@
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:04:09 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/19 10:18:32 by pweinsto         ###   ########.fr       */
+/*   Updated: 2021/06/25 17:28:44 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

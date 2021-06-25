@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pweinsto <pweinsto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/23 15:37:51 by pweinsto          #+#    #+#             */
-/*   Updated: 2021/06/24 15:59:48 by pweinsto         ###   ########.fr       */
+/*   Created: 2021/06/25 11:38:36 by pweinsto          #+#    #+#             */
+/*   Updated: 2021/06/25 12:24:23 by pweinsto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned int	x;
+	t_list	*element;
 
-	if (n < 0)
+	element = (t_list *)malloc(sizeof(t_list));
+	if (element)
 	{
-		ft_putchar_fd('-', fd);
-		x = (unsigned int)(n * -1);
+		element->content = content;
+		element->next = 0;
 	}
-	else
-		x = (unsigned int)n;
-	if (x >= 10)
-		ft_putnbr_fd(x / 10, fd);
-	ft_putchar_fd((x % 10) + 48, fd);
+	return (element);
 }
